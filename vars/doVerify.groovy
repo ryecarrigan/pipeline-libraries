@@ -1,3 +1,4 @@
 def call(Map args = [:]) {
-  echo "Stage not implemented"
+  // Invoke step from pipeline-library-steps
+  Verify()
 }
