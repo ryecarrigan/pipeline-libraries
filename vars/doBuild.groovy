@@ -1,4 +1,3 @@
 def call(Map args = [:]) {
-  // Invoke step from pipeline-library-steps
-  Build()
+  echo 'Implement Build step'
 }

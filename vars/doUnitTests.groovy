@@ -1,4 +1,3 @@
 def call(Map args = [:]) {
-  // Invoke step from pipeline-library-steps
-  UnitTests()
+  echo 'Implement Unit Tests step'
 }
