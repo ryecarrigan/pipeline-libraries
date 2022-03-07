@@ -4,6 +4,11 @@
 @Grab(group='org.codehaus.groovy', module='groovy-json', version='2.3.7')
 @Grab(group='org.codehaus.groovy.modules.http-builder', module='http-builder', version='0.7.1')
 
-def call() {
-  println "Hello"
+class grabStub1 implements Serializable {
+  static def helloWorld
+  static def script
+
+  static def print() {
+    script.println "Hello: ${helloWorld}"
+  }
 }
