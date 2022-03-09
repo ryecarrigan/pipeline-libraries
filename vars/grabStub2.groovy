@@ -1,20 +1,9 @@
+#!groovy
+@Grab(group='org.apache.httpcomponents', module='httpclient', version='4.2.1')
+@Grab(group='org.apache.httpcomponents', module='httpcore', version='4.2.1')
+@Grab(group='org.codehaus.groovy', module='groovy-json', version='2.3.7')
 @Grab(group='org.codehaus.groovy.modules.http-builder', module='http-builder', version='0.7.1')
 
-import groovy.json.*
-import groovy.json.JsonSlurper
-import groovyx.net.*
-import groovyx.net.http.*
-import groovyx.net.http.RESTClient
-import groovyx.net.http.RESTClient
-import groovy.util.XmlParser
-import org.apache.commons.lang3.*
-import java.io.*
-import java.text.SimpleDateFormat
-
-import static groovy.json.JsonOutput.*
-import static groovyx.net.http.Method.*
-import static groovyx.net.http.ContentType.*
-
 def call() {
-  println "Hello: ${TEXT}"
+  println "Hello: ${groovyx.net.http.ContentType.TEXT}"
 }
