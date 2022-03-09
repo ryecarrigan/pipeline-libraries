@@ -1,14 +1,5 @@
 #!groovy
-@Grab(group='org.apache.httpcomponents', module='httpclient', version='4.2.1')
-@Grab(group='org.apache.httpcomponents', module='httpcore', version='4.2.1')
-@Grab(group='org.codehaus.groovy', module='groovy-json', version='2.3.7')
-@Grab(group='org.codehaus.groovy.modules.http-builder', module='http-builder', version='0.7.1')
-
-class grabStub1 implements Serializable {
-  static def helloWorld
-  static def script
-
-  static def print() {
-    script.println "Hello: ${helloWorld}"
-  }
+def call() {
+  println "Hello world"
+  sleep time: 60, unit: 'SECONDS'
 }
