@@ -6,5 +6,5 @@
 
 def call() {
   println "Hello: ${groovyx.net.http.ContentType.TEXT}"
-  sleep time: 60, unit: 'SECONDS'
+  sleep time: 15, unit: 'SECONDS'
 }
