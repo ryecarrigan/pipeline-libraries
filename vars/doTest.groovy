@@ -1,3 +1,4 @@
 def call() {
-  echo pipelineUtil.getConfiguration('a', 'b')
+  pipelineUtil.script = this
+  pipelineUtil.getConfiguration('a', 'b')
 }
