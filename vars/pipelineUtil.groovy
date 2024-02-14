@@ -8,7 +8,7 @@ class pipelineUtil implements Serializable {
     def text = script.libraryResource('environment.json')
     def json = script.readJSON text: text
 
-    return json[environment][key]
+    return json[environment][key].toString()
   }
 
 }
