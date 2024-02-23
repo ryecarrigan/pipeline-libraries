@@ -1,14 +1,29 @@
-import net.sf.json.JSONSerializer
-
 class pipelineUtil implements Serializable {
 
   static def script
 
-  static def getConfiguration(environment, key) {
-    def text = script.libraryResource('environment.json')
-    def json = script.readJSON text: text
+  pipelineUtil() {
 
-    return json[environment][key].toString()
+  }
+
+  private static def configurationObject
+
+  static private def getConfigurationObject() {
+    if (configurationObject) {
+      return configurationObject
+    } else {
+      configurationObject = pipelineUtil.script.readJSON(text: pipelineUtil.script.libraryResource('environment.json'))
+    }
+  }
+
+  static def getConfiguration(environment, key) {
+    def config = getConfigurationObject()
+    def overrides = config.remove(environment)
+    for (String k : overrides.keys()) {
+      config[k] = overrides[k]
+    }
+
+    return config[key].toString()
   }
 
 }

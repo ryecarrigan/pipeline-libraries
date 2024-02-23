@@ -1,8 +1,15 @@
 {
-  "name": "dev",
-  "testing": {
-    "a": 1,
-    "b": 2,
-    "c": 3
+  "key1" : "value1",
+  "key2" : "value2",
+  "key3" : "value3",
+
+  "dev": {
+    "key1": "dev1",
+    "key2": "dev2"
+  },
+
+  "prd" : {
+    "key2": "prd2",
+    "key3": "prd3"
   }
 }
