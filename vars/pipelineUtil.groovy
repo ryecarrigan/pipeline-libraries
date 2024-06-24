@@ -7,6 +7,7 @@ class pipelineUtil implements Serializable {
   }
 
   private static def configurationObject
+  private static def configurationValue
 
   static private def getConfigurationObject() {
     if (configurationObject) {
@@ -14,6 +15,18 @@ class pipelineUtil implements Serializable {
     } else {
       configurationObject = pipelineUtil.script.readJSON(text: pipelineUtil.script.libraryResource('environment.json'))
     }
+  }
+
+  private static def getValue() {
+    if (!configurationValue) {
+      configurationValue = 'initialized'
+    }
+
+    return configurationValue
+  }
+
+  private static def setValue(String input) {
+    configurationValue = input
   }
 
   static def getConfiguration(environment, key) {
