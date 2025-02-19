@@ -1,5 +1,5 @@
-def call(args) {
+def call(String label='', args) {
   echo "hello world"
-  this.steps.node(args)
+  this.steps.node(label, args)
   echo "goodbye world"
 }
