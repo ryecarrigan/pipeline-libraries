@@ -1,4 +1,5 @@
 def call(args) {
   echo "hello world"
-  args()
+  this.steps.node(args)
+  echo "goodbye world"
 }
